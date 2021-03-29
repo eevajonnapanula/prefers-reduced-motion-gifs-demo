@@ -1,0 +1,41 @@
+:root {
+  --c-background-color: #273043;
+  --c-color: #eff6ee;
+  --c-primary: #9197ae;
+  --c-secondary: #d282a6;
+}
+
+body {
+  background-color: var(--c-background-color);
+  color: var(--c-color);
+  font-family: "Roboto", sans-serif;
+}
+
+*:focus {
+  outline: 0.1rem solid var(--c-primary);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30rem;
+}
+
+button {
+  color: var(--c-color);
+  background-color: var(--c-background-color);
+  border: 0.2rem solid var(--c-color);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button:focus {
+  border-color: var(--c-secondary);
+}
+
+img {
+  height: 12.5rem;
+}
