@@ -5,9 +5,9 @@ export default function FirstStep() {
     <section>
       <h2>Without Controls</h2>
       <picture>
-        <source srcSet="frame1.gif" media="(prefers-reduced-motion)" />
+        <source srcSet="firstFrame.gif" media="(prefers-reduced-motion)" />
         <img
-          src="cat-sewing.gif"
+          src="catSewing.gif"
           alt="A cat sewing yellow-green cloth with a sewing machine."
         />
       </picture>
