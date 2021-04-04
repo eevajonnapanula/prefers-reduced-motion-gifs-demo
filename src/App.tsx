@@ -1,28 +1,21 @@
-import { useState } from "react";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import FirstStep from "./FirstStep";
+import SecondStep from "./SecondStep";
+
 import "./styles.css";
 
 export default function App() {
-  const [play, setPlay] = useState(false);
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const handleClick = () => setPlay(!play);
-  const text = play ? "Pause" : "Play";
   return (
     <section>
       <h1>Reduced Motion GIF-Example</h1>
-      {prefersReducedMotion && (
-        <button onClick={handleClick} aria-label="play" aria-pressed={play}>
-          {text}
-        </button>
-      )}
-      <picture>
-        <source srcSet="frame1.gif" media="(prefers-reduced-motion)" />
-
-        <img
-          src="cat-sewing.gif"
-          alt="A cat sewing yellow-green cloth with a sewing machine."
-        />
-      </picture>
+      <p>
+        If you don't have the reduced motion-setting on your operating systems
+        level, you should see two identical, moving gifs. You might want to
+        emulate the <code>prefers-reduced-motion</code> media-feature. It can be
+        done at least with Chrome and Edge,{" "}
+        <a href="">instructions for it can be found from here.</a>
+      </p>
+      <FirstStep />
+      <SecondStep />
     </section>
   );
 }
